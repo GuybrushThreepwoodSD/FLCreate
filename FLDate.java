@@ -34,4 +34,10 @@ public class FLDate {
     
     }
 
+    public String toString() {
+
+        return month + "/" + day + "/" + year;
+
+    }
+
 }

@@ -2,9 +2,14 @@ public class FLCreate {
 
     public static void main (String[] args) {
 
-    
-        // Define variables
 
+        FLCardTree tcgTree = new FLCardTree();
+        tcgTree.insert(new FLCard("Test",new FLDate(1,2,12),new FLDate(99,99,99)));    
+        // Define variables
+        tcgTree.insert(new FLCard("Test",new FLDate(1,2,11),new FLDate(99,99,99)));    
+        tcgTree.insert(new FLCard("Test",new FLDate(1,23,12),new FLDate(99,99,99)));    
+        tcgTree.insert(new FLCard("Test",new FLDate(2,2,13),new FLDate(99,99,99)));    
+        tcgTree.printTree();
 
         // Load card list
 
