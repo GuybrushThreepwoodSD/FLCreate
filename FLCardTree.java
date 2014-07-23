@@ -48,7 +48,16 @@ public class FLCardTree {
 
     public void recursiveAddOcg(FLCardNode currentNode, FLCard insertedCard) {
 
-        
+        if (insertedCard.compareOCG(currentNode.value) == -1) {
+            if (currentNode.left == null)
+                currentNode.left = new FLCardNode(insertedCard);
+            else
+                recursiveAdd(currentNode.left, insertedCard);
+        }
+        else if (currentNode.right == null)
+            currentNode.right = new FLCardNode(insertedCard);
+        else
+            recursiveAdd(currentNode.right, insertedCard);
     
     }
 

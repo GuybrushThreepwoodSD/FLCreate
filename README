@@ -1,0 +1,39 @@
+These are just some basic files related to Salvation Development's Yu-Gi-Oh Pro Browser Simulator.
+
+The script will take in these files as input:
+
+cards.txt:
+
+Has a list of entries in the following format:
+########,##/##/####,##/##,####
+
+These represent an 8-digit (max) code used to identify a particular card, TCG-legal date, and OCG-legal date.
+If a card is not TCG-legal, the TCG date will be left blank.
+If a card is not OCG-legal, the OCG date will be left blank.
+
+lists.txt:
+
+Has a list of entries in the following format:
+!2014.7.14 (TCG+OCG)
+!2014.7.14 (TCG)
+!2014.7.1 (OCG)
+
+The dates for these must be in descending order, at least for each separate format (TCG,OCG,TCG/OCG)
+
+These represent the dates and legalities of the F&L Lists.
+
+Output file:
+
+This script will produce an output file in the following format:
+
+#Built using DevPro card editor.
+!2014.7.14 (TCG)
+#forbidden
+53797637 0
+....(list of cards found to be forbidden by this script
+#limit
+#semi limit
+!2014.7.1 (OCG)
+......
+
+It will ignore the actual contents of the limit/semi-limit list for now and only include the cards illegal at the time.
